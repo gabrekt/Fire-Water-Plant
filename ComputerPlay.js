@@ -8,4 +8,3 @@ export function computerSelection(){
     return cachipun;
 }
 
-computerSelection();
