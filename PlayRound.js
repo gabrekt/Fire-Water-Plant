@@ -13,14 +13,13 @@ function computerSelection(){
     return cachipun;
 }
 
-function playRound(playerSelection, computerSelection) {
-    caseInsensitive(playerSelection)
+function playRound(humplay, complay) {
+    caseInsensitive(humplay)
 
-    if (playerSelection === computerSelection) { return ('Its a Tie')}
-    else if (playerSelection == 'Plant' && computerSelection == 'Water') {return ('You Win !'+playerSelection+'beats'+computerSelection+'.')}
-    else if (playerSelection == 'Plant' && computerSelection == 'Fire') {return ('You Lost !'+computerSelection+'beats'+playerSelection+'.')}
+    if (humplay === complay) { return ('Its a Tie')}
+    else if (humplay == 'Plant' && complay == 'Water') {return ('You Win !'+humplay+'beats'+complay+'.')}
+    else if (humplay == 'Plant' && complay == 'Fire') {return ('You Lost !'+complay+'beats'+humplay+'.')}
   }
   
-  const playerSelection = "fiRe";
-  const computerSelection = computerPlay();
-  console.log(playRound(playerSelection, computerSelection));
+  const playerSelection = "pLanT";
+  console.log(playRound(playerSelection, computerSelection()));
