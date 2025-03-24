@@ -1,8 +1,8 @@
 /* playRound */
 //import {caseInsensitive} from './CaseInsensitive.js';
 //import {computerPlay} from './ComputerPlay.js';
- //comentario de prueba
-//Takes the String and returns the first letter on Caps, the rest in lowercaps.
+// comentario de prueba
+// Takes the String and returns the first letter on Caps, the rest in lowercaps.
 function caseInsensitive(StringToChange){
     return((StringToChange.toUpperCase().slice(0,1) + StringToChange.toLowerCase().slice(1)))
 }
