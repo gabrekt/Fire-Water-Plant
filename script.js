@@ -94,7 +94,6 @@ function resetGame() {
     });
   }, 100); // Small delay to avoid interrupting immediate playback
 
-  // 🎮 Reset game state
   playerScore = 0;
   computerScore = 0;
   resultDisplay.textContent = 'Choose your element to start!';
@@ -103,7 +102,6 @@ function resetGame() {
   document.querySelectorAll('button[data-choice]').forEach(btn => btn.disabled = false);
   resultDisplay.classList.remove('winner');
 
-  // 🌀 Clear visual classes
   document.body.classList.remove('fade-in');
 }
 
