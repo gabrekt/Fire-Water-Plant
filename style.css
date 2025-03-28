@@ -1,6 +1,7 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+  body {
+    font-family: 'Press Start 2P', monospace;}
+      text-align: center;
     background: linear-gradient(to bottom, #e0f7fa, #a7ffeb);
     padding: 20px;
   }
@@ -39,3 +40,75 @@ body {
     font-size: 1.2rem;
   }
   
+  .flash {
+    animation: flashText 0.5s ease;
+  }
+
+  @keyframes flashText {
+    0%   { color: #000; }
+    50%  { color: #ff9800; }
+    100% { color: #000; }
+  }
+
+
+  /* Glow effect for winner */
+.winner {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #4caf50;
+  text-shadow: 0 0 10px #4caf50;
+}
+
+/* Pop effect for button click */
+.clicked {
+  transform: scale(1.2);
+}
+
+
+/* ✨ Fade animation */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+body.fade-in {
+  opacity: 1;
+  transition: opacity 0.6s ease;
+}
+
+/* 🖱️ Element hover effects */
+button[data-choice="Fire"]:hover img {
+  filter: drop-shadow(0 0 10px red);
+}
+
+button[data-choice="Water"]:hover img {
+  filter: drop-shadow(0 0 10px #00bfff);
+}
+
+button[data-choice="Plant"]:hover img {
+  filter: drop-shadow(0 0 10px limegreen);
+}
+
+#text-box {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+}
+
+#text-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#round-result {
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  width: 84%;
+  font-size: 1.2rem;
+  font-family: 'Press Start 2P', monospace;
+  color: black;
+  text-align: left;
+  line-height: 1.3;
+}

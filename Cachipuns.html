@@ -11,10 +11,30 @@
     <button data-choice="Fire"> <img src="images/fire.png">   </button>
     <button data-choice="Water"><img src="images/water2.png">  </button>
     <button data-choice="Plant"><img src="images/plant.png">  </button>
+
+    <button onclick="resetGame()" id="reset-btn" style="margin-top: 20px; font-size: 1rem;">
+      🔄 Restart Match
+    </button>
+
   </div>
 
-  <script type='text/javascript' src="./js/PlayRound.js">
+  <div id="results">
+    <div id="text-box">
+      <img src="images/textBox.png" alt="Text Box">
+      <div id="round-result">Choose your element to start!</div>
+    </div>
+    <p id="score">You: 0 | Computer: 0</p>
+  </div>
+
+  <script type='text/javascript' src="script.js">
   </script>
+
+<audio id="round-win-sound" src="sfx/round_win.mp3" preload="auto"></audio>
+<audio id="round-lost-sound" src="sfx/round_lost.mp3" preload="auto"></audio>
+<audio id="victory-sound" src="sfx/victory.mp3" preload="auto"></audio>
+<audio id="defeat-sound" src="sfx/defeat.mp3" preload="auto"></audio>
+<audio id="reset-sound" src="sfx/reset.mp3" preload="auto"></audio>
+
 </body>
 </html>
 
