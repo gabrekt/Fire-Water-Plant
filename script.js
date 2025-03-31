@@ -31,7 +31,7 @@ function playRound(player, computer) {
 }
 
 function updateUI(result) {
-  resultDisplay.textContent = result;
+  typeText(result);
   resultDisplay.classList.add('flash');
 
   // 🔊 Play sound depending on round result
@@ -105,6 +105,25 @@ function resetGame() {
   document.body.classList.remove('fade-in');
 }
 
+function typeText(text, callback) {
+  const textSpan = document.getElementById('text-content');
+  const arrow = document.getElementById('arrow');
+  textSpan.textContent = '';
+  arrow.style.visibility = 'hidden';
+
+  let i = 0;
+  const speed = 30; // ms per character
+
+  const typeInterval = setInterval(() => {
+    textSpan.textContent += text.charAt(i);
+    i++;
+    if (i >= text.length) {
+      clearInterval(typeInterval);
+      arrow.style.visibility = 'visible'; // show arrow when done
+      if (callback) callback();
+    }
+  }, speed);
+}
 
 
 
